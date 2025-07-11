@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imobiliária Lea Firme</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background-color: #006400;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #f8f8f8;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #006400;
+      font-weight: bold;
+    }
+
+    .hero {
+      background-image: url('https://i.imgur.com/yXoQbeK.jpg'); /* Exemplo de imagem */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .section {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #006400;
+      margin-bottom: 1rem;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 280px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #006400;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .whatsapp-float a {
+      background-color: #25d366;
+      color: white;
+      padding: 14px 16px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Imobiliária Lea Firme</h1>
+    <p>Conectando você ao seu novo lar</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Realize o sonho da casa própria</h1>
+    <p>Atendimento humanizado e soluções acessíveis</p>
+  </section>
+
+  <section class="section" id="sobre">
+    <h2>Quem Somos</h2>
+    <p>Atuamos com compromisso e confiança no mercado imobiliário, ajudando famílias a conquistar o seu espaço.</p>
+  </section>
+
+  <section class="section" id="servicos">
+    <h2>Serviços</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Venda de Imóveis</h3>
+        <p>Ampla seleção de casas, apartamentos e terrenos.</p>
+      </div>
+      <div class="card">
+        <h3>Financiamento</h3>
+        <p>Facilitamos seu processo com orientação e apoio completo.</p>
+      </div>
+      <div class="card">
+        <h3>Consultoria</h3>
+        <p>Suporte personalizado para te ajudar a escolher com segurança.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contato">
+    <h2>Fale Conosco</h2>
+    <p>Entre em contato pelo WhatsApp ou pelas redes sociais. Será um prazer te atender!</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Imobiliária Lea Firme. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Botão Flutuante WhatsApp -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/5571988554353" target="_blank" title="Fale conosco no WhatsApp">💬</a>
+  </div>
+
+</body>
+</html>
