@@ -1,171 +1,507 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Imobiliária Lea Firme</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      line-height: 1.6;
-      color: #333;
-    }
-
-    header {
-      background-color: #006400;
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav {
-      background: #f8f8f8;
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #006400;
-      font-weight: bold;
-    }
-
-    .hero {
-      background-image: url('https://i.imgur.com/yXoQbeK.jpg'); /* Exemplo de imagem */
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .section {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .section h2 {
-      color: #006400;
-      margin-bottom: 1rem;
-    }
-
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 1rem;
-      width: 280px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background-color: #006400;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-
-    /* WhatsApp Button */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-
-    .whatsapp-float a {
-      background-color: #25d366;
-      color: white;
-      padding: 14px 16px;
-      border-radius: 50%;
-      text-decoration: none;
-      font-size: 24px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leafirme Imobiliária - Seu Lar dos Sonhos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset e Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Cabeçalho */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #3498db;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 5%;
+            margin-top: 70px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Destaques */
+        .destaques {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+            color: #2c3e50;
+        }
+        
+        .properties {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .property-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .property-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .property-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .property-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .property-card:hover .property-img img {
+            transform: scale(1.1);
+        }
+        
+        .property-info {
+            padding: 1.5rem;
+        }
+        
+        .property-info h3 {
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+        
+        .property-info p {
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+        }
+        
+        .price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #3498db;
+        }
+        
+        /* Sobre */
+        .about {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 5rem 5%;
+        }
+        
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-img {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Contato */
+        .contact {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+        
+        /* Rodapé */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .social-links {
+            margin: 1.5rem 0;
+        }
+        
+        .social-links a {
+            color: #fff;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #3498db;
+        }
+        
+        /* Botão do WhatsApp */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                transform: translateY(-150%);
+                transition: transform 0.3s ease-in-out;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-img {
+                order: -1;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">Leafirme<span>Imóveis</span></a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#properties">Imóveis</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <header>
-    <h1>Imobiliária Lea Firme</h1>
-    <p>Conectando você ao seu novo lar</p>
-  </header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Encontre o lar dos seus sonhos</h1>
+            <p>A Leafirme Imobiliária oferece as melhores opções de imóveis para você e sua família. Conheça nossos destaques e realize o sonho da casa própria.</p>
+            <a href="#properties" class="btn">Ver Imóveis</a>
+        </div>
+    </section>
 
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#contato">Contato</a>
-  </nav>
+    <!-- Destaques -->
+    <section class="destaques" id="properties">
+        <h2 class="section-title">Imóveis em Destaque</h2>
+        <div class="properties">
+            <div class="property-card">
+                <div class="property-img">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Casa moderna">
+                </div>
+                <div class="property-info">
+                    <h3>Casa Moderna</h3>
+                    <p>Bairro Jardins, 3 quartos, 2 banheiros</p>
+                    <p class="price">R$ 850.000</p>
+                </div>
+            </div>
+            
+            <div class="property-card">
+                <div class="property-img">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Apartamento de luxo">
+                </div>
+                <div class="property-info">
+                    <h3>Apartamento de Luxo</h3>
+                    <p>Centro, 2 quartos, 2 banheiros, 1 vaga</p>
+                    <p class="price">R$ 1.200.000</p>
+                </div>
+            </div>
+            
+            <div class="property-card">
+                <div class="property-img">
+                    <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Casa com piscina">
+                </div>
+                <div class="property-info">
+                    <h3>Casa com Piscina</h3>
+                    <p>Bairro Alto, 4 quartos, 3 banheiros</p>
+                    <p class="price">R$ 1.500.000</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="hero">
-    <h1>Realize o sonho da casa própria</h1>
-    <p>Atendimento humanizado e soluções acessíveis</p>
-  </section>
+    <!-- Sobre -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Sobre a Leafirme</h2>
+                <p>A Leafirme Imobiliária está no mercado há mais de 15 anos, ajudando famílias a encontrar o lar perfeito. Nossa equipe de corretores altamente qualificados está pronta para oferecer o melhor atendimento e as melhores opções do mercado.</p>
+                <p>Valorizamos a transparência, a ética e o compromisso com nossos clientes, garantindo uma experiência tranquila e satisfatória em todos os negócios.</p>
+            </div>
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Equipe Leafirme">
+            </div>
+        </div>
+    </section>
 
-  <section class="section" id="sobre">
-    <h2>Quem Somos</h2>
-    <p>Atuamos com compromisso e confiança no mercado imobiliário, ajudando famílias a conquistar o seu espaço.</p>
-  </section>
+    <!-- Contato -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Entre em Contato</h2>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
 
-  <section class="section" id="servicos">
-    <h2>Serviços</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Venda de Imóveis</h3>
-        <p>Ampla seleção de casas, apartamentos e terrenos.</p>
-      </div>
-      <div class="card">
-        <h3>Financiamento</h3>
-        <p>Facilitamos seu processo com orientação e apoio completo.</p>
-      </div>
-      <div class="card">
-        <h3>Consultoria</h3>
-        <p>Suporte personalizado para te ajudar a escolher com segurança.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <h3>Leafirme Imobiliária</h3>
+            <p>O melhor lugar para encontrar seu novo lar</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2023 Leafirme Imobiliária. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-  <section class="section" id="contato">
-    <h2>Fale Conosco</h2>
-    <p>Entre em contato pelo WhatsApp ou pelas redes sociais. Será um prazer te atender!</p>
-  </section>
+    <!-- Botão do WhatsApp -->
+    <a href="https://wa.me/5571988554353?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20imóveis" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-  <footer>
-    <p>&copy; 2025 Imobiliária Lea Firme. Todos os direitos reservados.</p>
-  </footer>
-
-  <!-- Botão Flutuante WhatsApp -->
-  <div class="whatsapp-float">
-    <a href="https://wa.me/5571988554353" target="_blank" title="Fale conosco no WhatsApp">💬</a>
-  </div>
-
+    <!-- JavaScript -->
+    <script>
+        // Menu mobile
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling para links âncora
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
