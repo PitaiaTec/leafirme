@@ -1,0 +1,44 @@
+// WhatsApp Button Animation
+document.addEventListener('DOMContentLoaded', function() {
+    const whatsappButton = document.querySelector('.whatsapp-button');
+    
+    // Adiciona múltiplos pulsos
+    setInterval(function() {
+        const pulse = document.createElement('div');
+        pulse.className = 'pulse';
+        document.querySelector('.whatsapp-float').appendChild(pulse);
+        
+        // Remove o elemento após a animação
+        setTimeout(function() {
+            pulse.remove();
+        }, 2000);
+    }, 2000);
+    
+    // Efeito ao passar o mouse
+    if(whatsappButton) {
+        whatsappButton.addEventListener('mouseenter', function() {
+            this.parentElement.querySelectorAll('.pulse').forEach(p => {
+                p.style.animationPlayState = 'paused';
+            });
+        });
+        
+        whatsappButton.addEventListener('mouseleave', function() {
+            this.parentElement.querySelectorAll('.pulse').forEach(p => {
+                p.style.animationPlayState = 'running';
+            });
+        });
+    }
+});
+
+// Menu Mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const nav = document.querySelector('.nav');
+    
+    if(mobileMenu && nav) {
+        mobileMenu.addEventListener('click', function() {
+            nav.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    }
+});
