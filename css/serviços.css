@@ -1,0 +1,92 @@
+/* Hero Section */
+.page-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/services-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 0 100px;
+    margin-top: 70px;
+}
+
+.page-hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.page-hero p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* Services Detail */
+.services-detail {
+    padding: 80px 0;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.service.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-image {
+    flex: 1;
+}
+
+.service-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-content {
+    flex: 1;
+}
+
+.service-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.service-content p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.service-content ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.service-content ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .service, .service.reverse {
+        flex-direction: column;
+    }
+    
+    .service-image, .service-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 36px;
+    }
+    
+    .service-content h2 {
+        font-size: 28px;
+    }
+}
