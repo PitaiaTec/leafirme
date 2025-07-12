@@ -1,0 +1,166 @@
+/* Hero Section */
+.about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 0 100px;
+    margin-top: 70px;
+}
+
+.about-hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* About Content */
+.about-content {
+    padding: 80px 0;
+}
+
+.about-content .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: var(--primary);
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission Section */
+.mission {
+    background-color: var(--primary);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.mission-box {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-box h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.mission-box p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Values Section */
+.values {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+.values h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: var(--dark);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-card i {
+    font-size: 40px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.value-card h4 {
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.value-card p {
+    color: var(--gray);
+}
+
+/* Principles Section */
+.principles {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.principles h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: var(--dark);
+}
+
+.principles-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.principles-content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-content .container {
+        flex-direction: column;
+    }
+    
+    .about-hero h1 {
+        font-size: 36px;
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
