@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhe Conosco - Pitaia Tec</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo-pitaia.png" alt="Pitaia Tec">
+            </a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Trabalhe Conosco</h1>
+            <p>Faça parte do nosso time de inovação e tecnologia</p>
+        </div>
+    </section>
+
+    <section class="careers-form">
+        <div class="container">
+            <div class="form-container">
+                <h2>Envie seu currículo</h2>
+                <p>Estamos sempre em busca de talentos para nosso time. Preencha o formulário abaixo e envie seu currículo.</p>
+                
+                <form action="https://formsubmit.co/rodrigocontato77@gmail.com" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_subject" value="Novo currículo - Trabalhe Conosco">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div class="form-group">
+                        <label for="nome">Nome Completo*</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone*</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cargo">Cargo de Interesse*</label>
+                        <select id="cargo" name="cargo" required>
+                            <option value="">Selecione...</option>
+                            <option value="Desenvolvedor Front-end">Desenvolvedor Front-end</option>
+                            <option value="Desenvolvedor Back-end">Desenvolvedor Back-end</option>
+                            <option value="Designer UI/UX">Designer UI/UX</option>
+                            <option value="Gerente de Projetos">Gerente de Projetos</option>
+                            <option value="Analista de Marketing Digital">Analista de Marketing Digital</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Por que você quer trabalhar na Pitaia Tec?*</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="curriculo">Anexar Currículo (PDF ou DOC)*</label>
+                        <input type="file" id="curriculo" name="attachment" accept=".pdf,.doc,.docx" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Enviar Candidatura</button>
+                </form>
+            </div>
+            
+            <div class="careers-info">
+                <h2>Por que trabalhar na Pitaia Tec?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Oportunidades de Crescimento</h3>
+                        <p>Ambiente que valoriza o desenvolvimento profissional contínuo.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Time Diversificado</h3>
+                        <p>Trabalhe com profissionais talentosos de diversas áreas.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Ambiente Acolhedor</h3>
+                        <p>Cultura organizacional baseada em respeito e colaboração.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Inovação Constante</h3>
+                        <p>Projetos desafiadores que impulsionam sua carreira.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Pitaia Tec</h3>
+                    <p>Soluções tecnológicas para impulsionar seu negócio</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> (71) 98420-4638</li>
+                        <li><i class="fas fa-envelope"></i> rodrigocontato77@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Pitaia Tec. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/5571984204638" target="_blank" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <div class="pulse"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
