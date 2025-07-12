@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Pitaia Tec</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo-pitaia.png" alt="Pitaia Tec">
+            </a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contato</h1>
+            <p>Entre em contato com nossa equipe</p>
+        </div>
+    </section>
+
+    <section class="contact-container">
+        <div class="container">
+            <div class="contact-info">
+                <h2>Como podemos ajudar?</h2>
+                
+                <div class="contact-method">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="contact-details">
+                        <h3>Telefone</h3>
+                        <a href="tel:71984204638">(71) 98420-4638</a>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-details">
+                        <h3>E-mail</h3>
+                        <a href="mailto:rodrigocontato77@gmail.com">rodrigocontato77@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <i class="fab fa-whatsapp"></i>
+                    <div class="contact-details">
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/5571984204638" target="_blank">Envie uma mensagem</a>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <i class="fas fa-clock"></i>
+                    <div class="contact-details">
+                        <h3>Horário de Atendimento</h3>
+                        <p>Segunda a Sexta: 9h às 18h</p>
+                        <p>Sábado: 9h às 12h</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Envie sua mensagem</h2>
+                <form action="https://formsubmit.co/rodrigocontato77@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="Novo contato do site">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div class="form-group">
+                        <label for="nome">Nome Completo*</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="servico">Serviço de Interesse</label>
+                        <select id="servico" name="servico">
+                            <option value="">Selecione...</option>
+                            <option value="Site">Criação de Site</option>
+                            <option value="Aplicativo">Aplicativo Mobile</option>
+                            <option value="Sistema">Sistema Personalizado</option>
+                            <option value="Tráfego Pago">Tráfego Pago</option>
+                            <option value="Consultoria">Consultoria</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem*</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Pitaia Tec</h3>
+                    <p>Soluções tecnológicas para impulsionar seu negócio</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> (71) 98420-4638</li>
+                        <li><i class="fas fa-envelope"></i> rodrigocontato77@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Pitaia Tec. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/5571984204638" target="_blank" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <div class="pulse"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
